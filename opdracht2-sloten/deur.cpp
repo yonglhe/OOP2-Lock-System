@@ -9,6 +9,11 @@ Deur::Deur(int x, int y, unsigned int d): x_coordinaat(x), y_coordinaat(y), leng
     status = true;
 }
 
+Deur::Deur(int x, int y, unsigned int d, Slot* s): x_coordinaat(x), y_coordinaat(y), lengte(d), slot(s)
+{
+    status = true;
+}
+
 Deur::~Deur()
 {
 }
@@ -51,4 +56,9 @@ int Deur::coordinaatX() const
 int Deur::coordinaatY() const
 {
     return y_coordinaat;
+}
+
+Slot* Deur::getSlot() const
+{
+    return slot;
 }

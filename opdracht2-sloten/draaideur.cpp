@@ -5,7 +5,12 @@
 #include <QPen>
 
 Draaideur::Draaideur(int x, int y, unsigned int d, bool l): Deur(x, y, d), liggend(l)
-{}
+{
+}
+
+Draaideur::Draaideur(int x, int y, unsigned int d, bool l, Slot* cs): Deur(x, y, d, cs), liggend(l)
+{
+}
 
 void Draaideur::teken(QPaintDevice* tp)
 {
@@ -38,10 +43,10 @@ bool Draaideur::isLiggend() const
 
 void Draaideur::open()
 {
-    setStatus(true);
+    this->setStatus(true);
 }
 
 void Draaideur::sluit()
 {
-    setStatus(false);
+    this->setStatus(false);
 }

@@ -1,9 +1,12 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QPainter>
+
 #include "hallsensor.h"
 #include "schuifdeur.h"
 #include "draaideur.h"
+#include "codeslot.h"
+#include "sleutelslot.h"
 
 MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWindow){
 
@@ -15,9 +18,9 @@ MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWin
     // d2=new Draaideur(295, 290, 30, false);
 
     s1 = shared_ptr<Hallsensor>(new Hallsensor(515, 160));
-    sd = shared_ptr<Schuifdeur>(new Schuifdeur(505, 250, 80, s1.get()));
-    d1 = shared_ptr<Draaideur>(new Draaideur(250, 140, 40, true));
-    d2 = shared_ptr<Draaideur>(new Draaideur(295, 290, 30, false));
+    sd = shared_ptr<Schuifdeur>(new Schuifdeur(505, 250, 80, s1.get(), new Sleutelslot("password")));
+    d1 = shared_ptr<Draaideur>(new Draaideur(250, 140, 40, true, new Codeslot(111)));
+    d2 = shared_ptr<Draaideur>(new Draaideur(295, 290, 30, false, new Codeslot(222)));
 
     connect(ui->hallsensor, &QPushButton::clicked, this, &MainWindow::hallsensor);
     connect(ui->schuifdeurKnop, &QPushButton::clicked, this, &MainWindow::schuifdeurKnop);
@@ -58,27 +61,42 @@ void MainWindow::hallsensor()
 
 void MainWindow::schuifdeurKnop()
 {
-    if(sd->isDeurOpen())
+    if(sd->isDeurOpen()) {
         sd->sluit();
-    else
-        sd->open();
+        sd->getSlot()->vergrendel();
+    } else {
+        sd->getSlot()->ontgrendel(ui->sleutelSlot->text().toStdString());
+        if(!sd->getSlot()->isVergrendeld()){
+            sd->open();
+        }
+    }
     update();
 }
 
 void MainWindow::draaideur1Knop()
 {
-    if(d1->isDeurOpen())
+    if(d1->isDeurOpen()){
         d1->sluit();
-    else
-        d1->open();
+        d1->getSlot()->vergrendel();
+    }else{
+        d1->getSlot()->ontgrendel(ui->codeSlot1->text().toStdString());
+        if(!d1->getSlot()->isVergrendeld()){
+            d1->open();
+        }
+    }
     update();
 }
 
 void MainWindow::draaideur2Knop()
 {
-    if(d2->isDeurOpen())
+    if(d2->isDeurOpen()){
         d2->sluit();
-    else
-        d2->open();
+        d2->getSlot()->vergrendel();
+    }else{
+        d2->getSlot()->ontgrendel(ui->codeSlot2->text().toStdString());
+        if(!d2->getSlot()->isVergrendeld()){
+            d2->open();
+        }
+    }
     update();
 }

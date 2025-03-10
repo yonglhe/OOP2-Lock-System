@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -29,6 +30,9 @@ public:
     QPushButton *draaideur1Knop;
     QPushButton *draaideur2Knop;
     QLabel *labelHalsensor;
+    QLineEdit *sleutelSlot;
+    QLineEdit *codeSlot2;
+    QLineEdit *codeSlot1;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -54,6 +58,15 @@ public:
         labelHalsensor = new QLabel(centralwidget);
         labelHalsensor->setObjectName("labelHalsensor");
         labelHalsensor->setGeometry(QRect(540, 160, 58, 15));
+        sleutelSlot = new QLineEdit(centralwidget);
+        sleutelSlot->setObjectName("sleutelSlot");
+        sleutelSlot->setGeometry(QRect(560, 270, 113, 22));
+        codeSlot2 = new QLineEdit(centralwidget);
+        codeSlot2->setObjectName("codeSlot2");
+        codeSlot2->setGeometry(QRect(360, 270, 113, 22));
+        codeSlot1 = new QLineEdit(centralwidget);
+        codeSlot1->setObjectName("codeSlot1");
+        codeSlot1->setGeometry(QRect(300, 150, 113, 22));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -71,11 +84,17 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+#if QT_CONFIG(accessibility)
+        MainWindow->setAccessibleDescription(QString());
+#endif // QT_CONFIG(accessibility)
         schuifdeurKnop->setText(QCoreApplication::translate("MainWindow", "VD", nullptr));
         hallsensor->setText(QCoreApplication::translate("MainWindow", "s1", nullptr));
         draaideur1Knop->setText(QCoreApplication::translate("MainWindow", "d1", nullptr));
         draaideur2Knop->setText(QCoreApplication::translate("MainWindow", "d2", nullptr));
         labelHalsensor->setText(QCoreApplication::translate("MainWindow", "halsensor", nullptr));
+#if QT_CONFIG(accessibility)
+        sleutelSlot->setAccessibleDescription(QString());
+#endif // QT_CONFIG(accessibility)
     } // retranslateUi
 
 };

@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="accessibleDescription">
+   <string/>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="schuifdeurKnop">
     <property name="geometry">
@@ -77,6 +80,39 @@
     </property>
     <property name="text">
      <string>halsensor</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="sleutelSlot">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>270</y>
+      <width>113</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="accessibleDescription">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="codeSlot2">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>270</y>
+      <width>113</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="codeSlot1">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>150</y>
+      <width>113</width>
+      <height>22</height>
+     </rect>
     </property>
    </widget>
   </widget>

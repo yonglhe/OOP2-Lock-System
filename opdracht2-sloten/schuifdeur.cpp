@@ -9,6 +9,10 @@ Schuifdeur::Schuifdeur(int x, int y, unsigned int d, Sensor* s): Deur(x, y, d), 
 {
 }
 
+Schuifdeur::Schuifdeur(int x, int y, unsigned int d, Sensor* s, Slot* ss): Deur(x, y, d, ss), sensor(s)
+{
+}
+
 void Schuifdeur::teken(QPaintDevice* tp)
 {
     QPainter p(tp);

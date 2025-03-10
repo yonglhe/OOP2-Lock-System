@@ -9,6 +9,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    codeslot.cpp \
     deur.cpp \
     draaideur.cpp \
     hallsensor.cpp \
@@ -16,15 +17,18 @@ SOURCES += \
     mainwindow.cpp \
     schuifdeur.cpp \
     sensor.cpp \
+    sleutelslot.cpp \
     slot.cpp
 
 HEADERS += \
+    codeslot.h \
     deur.h \
     draaideur.h \
     hallsensor.h \
     mainwindow.h \
     schuifdeur.h \
     sensor.h \
+    sleutelslot.h \
     slot.h
 
 FORMS += \

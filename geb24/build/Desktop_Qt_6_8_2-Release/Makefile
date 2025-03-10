@@ -52,20 +52,26 @@ OBJECTS_DIR   = ./
 
 ####### Files
 
-SOURCES       = ../../../opdracht2-sloten/deur.cpp \
+SOURCES       = ../../../opdracht2-sloten/codeslot.cpp \
+		../../../opdracht2-sloten/deur.cpp \
 		../../../opdracht2-sloten/draaideur.cpp \
 		../../../opdracht2-sloten/hallsensor.cpp \
 		../../../opdracht2-sloten/main.cpp \
 		../../../opdracht2-sloten/mainwindow.cpp \
 		../../../opdracht2-sloten/schuifdeur.cpp \
-		../../../opdracht2-sloten/sensor.cpp moc_mainwindow.cpp
-OBJECTS       = deur.o \
+		../../../opdracht2-sloten/sensor.cpp \
+		../../../opdracht2-sloten/sleutelslot.cpp \
+		../../../opdracht2-sloten/slot.cpp moc_mainwindow.cpp
+OBJECTS       = codeslot.o \
+		deur.o \
 		draaideur.o \
 		hallsensor.o \
 		main.o \
 		mainwindow.o \
 		schuifdeur.o \
 		sensor.o \
+		sleutelslot.o \
+		slot.o \
 		moc_mainwindow.o
 DIST          = /home/paco/Qt/6.8.2/gcc_64/mkspecs/features/spec_pre.prf \
 		/home/paco/Qt/6.8.2/gcc_64/mkspecs/common/unix.conf \
@@ -300,18 +306,24 @@ DIST          = /home/paco/Qt/6.8.2/gcc_64/mkspecs/features/spec_pre.prf \
 		/home/paco/Qt/6.8.2/gcc_64/mkspecs/features/exceptions.prf \
 		/home/paco/Qt/6.8.2/gcc_64/mkspecs/features/yacc.prf \
 		/home/paco/Qt/6.8.2/gcc_64/mkspecs/features/lex.prf \
-		/home/paco/codes/opdracht2-sloten/geb24.pro ../../../opdracht2-sloten/deur.h \
+		/home/paco/codes/opdracht2-sloten/geb24.pro ../../../opdracht2-sloten/codeslot.h \
+		../../../opdracht2-sloten/deur.h \
 		../../../opdracht2-sloten/draaideur.h \
 		../../../opdracht2-sloten/hallsensor.h \
 		../../../opdracht2-sloten/mainwindow.h \
 		../../../opdracht2-sloten/schuifdeur.h \
-		../../../opdracht2-sloten/sensor.h ../../../opdracht2-sloten/deur.cpp \
+		../../../opdracht2-sloten/sensor.h \
+		../../../opdracht2-sloten/sleutelslot.h \
+		../../../opdracht2-sloten/slot.h ../../../opdracht2-sloten/codeslot.cpp \
+		../../../opdracht2-sloten/deur.cpp \
 		../../../opdracht2-sloten/draaideur.cpp \
 		../../../opdracht2-sloten/hallsensor.cpp \
 		../../../opdracht2-sloten/main.cpp \
 		../../../opdracht2-sloten/mainwindow.cpp \
 		../../../opdracht2-sloten/schuifdeur.cpp \
-		../../../opdracht2-sloten/sensor.cpp
+		../../../opdracht2-sloten/sensor.cpp \
+		../../../opdracht2-sloten/sleutelslot.cpp \
+		../../../opdracht2-sloten/slot.cpp
 QMAKE_TARGET  = geb24
 DESTDIR       = 
 TARGET        = geb24
@@ -813,8 +825,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /home/paco/Qt/6.8.2/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../../../opdracht2-sloten/deur.h ../../../opdracht2-sloten/draaideur.h ../../../opdracht2-sloten/hallsensor.h ../../../opdracht2-sloten/mainwindow.h ../../../opdracht2-sloten/schuifdeur.h ../../../opdracht2-sloten/sensor.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../../../opdracht2-sloten/deur.cpp ../../../opdracht2-sloten/draaideur.cpp ../../../opdracht2-sloten/hallsensor.cpp ../../../opdracht2-sloten/main.cpp ../../../opdracht2-sloten/mainwindow.cpp ../../../opdracht2-sloten/schuifdeur.cpp ../../../opdracht2-sloten/sensor.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../../../opdracht2-sloten/codeslot.h ../../../opdracht2-sloten/deur.h ../../../opdracht2-sloten/draaideur.h ../../../opdracht2-sloten/hallsensor.h ../../../opdracht2-sloten/mainwindow.h ../../../opdracht2-sloten/schuifdeur.h ../../../opdracht2-sloten/sensor.h ../../../opdracht2-sloten/sleutelslot.h ../../../opdracht2-sloten/slot.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../../../opdracht2-sloten/codeslot.cpp ../../../opdracht2-sloten/deur.cpp ../../../opdracht2-sloten/draaideur.cpp ../../../opdracht2-sloten/hallsensor.cpp ../../../opdracht2-sloten/main.cpp ../../../opdracht2-sloten/mainwindow.cpp ../../../opdracht2-sloten/schuifdeur.cpp ../../../opdracht2-sloten/sensor.cpp ../../../opdracht2-sloten/sleutelslot.cpp ../../../opdracht2-sloten/slot.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../../../opdracht2-sloten/mainwindow.ui $(DISTDIR)/
 
 
@@ -1065,6 +1077,10 @@ compiler_lex_clean:
 compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_uic_clean 
 
 ####### Compile
+
+codeslot.o: ../../../opdracht2-sloten/codeslot.cpp ../../../opdracht2-sloten/codeslot.h \
+		../../../opdracht2-sloten/slot.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o codeslot.o ../../../opdracht2-sloten/codeslot.cpp
 
 deur.o: ../../../opdracht2-sloten/deur.cpp ../../../opdracht2-sloten/deur.h \
 		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/QPaintDevice \
@@ -1854,6 +1870,23 @@ mainwindow.o: ../../../opdracht2-sloten/mainwindow.cpp ../../../opdracht2-sloten
 		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qguiapplication_platform.h \
 		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qtabwidget.h \
 		ui_mainwindow.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/QVariant \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/QApplication \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qapplication.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/QLabel \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qlabel.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qframe.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qpicture.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qtextdocument.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/QMenuBar \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qmenubar.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qmenu.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/QPushButton \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qpushbutton.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/QStatusBar \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qstatusbar.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/QWidget \
 		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/QPainter \
 		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qpainter.h \
 		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qtextoption.h \
@@ -2132,6 +2165,13 @@ sensor.o: ../../../opdracht2-sloten/sensor.cpp ../../../opdracht2-sloten/sensor.
 		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qfontmetrics.h \
 		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/QPen
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o sensor.o ../../../opdracht2-sloten/sensor.cpp
+
+sleutelslot.o: ../../../opdracht2-sloten/sleutelslot.cpp ../../../opdracht2-sloten/sleutelslot.h \
+		../../../opdracht2-sloten/slot.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o sleutelslot.o ../../../opdracht2-sloten/sleutelslot.cpp
+
+slot.o: ../../../opdracht2-sloten/slot.cpp ../../../opdracht2-sloten/slot.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o slot.o ../../../opdracht2-sloten/slot.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp
