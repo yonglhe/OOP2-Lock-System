@@ -30,9 +30,11 @@ public:
     QPushButton *draaideur1Knop;
     QPushButton *draaideur2Knop;
     QLabel *labelHalsensor;
-    QLineEdit *sleutelSlot;
-    QLineEdit *codeSlot2;
-    QLineEdit *codeSlot1;
+    QLineEdit *schuifPassSlot1;
+    QLineEdit *draaiCodeSlot2;
+    QLineEdit *draaiCodeSlot1;
+    QLineEdit *schuifCodeSlot1;
+    QLineEdit *draaiPassSlot1;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -58,15 +60,27 @@ public:
         labelHalsensor = new QLabel(centralwidget);
         labelHalsensor->setObjectName("labelHalsensor");
         labelHalsensor->setGeometry(QRect(540, 160, 58, 15));
-        sleutelSlot = new QLineEdit(centralwidget);
-        sleutelSlot->setObjectName("sleutelSlot");
-        sleutelSlot->setGeometry(QRect(560, 270, 113, 22));
-        codeSlot2 = new QLineEdit(centralwidget);
-        codeSlot2->setObjectName("codeSlot2");
-        codeSlot2->setGeometry(QRect(360, 270, 113, 22));
-        codeSlot1 = new QLineEdit(centralwidget);
-        codeSlot1->setObjectName("codeSlot1");
-        codeSlot1->setGeometry(QRect(300, 150, 113, 22));
+        schuifPassSlot1 = new QLineEdit(centralwidget);
+        schuifPassSlot1->setObjectName("schuifPassSlot1");
+        schuifPassSlot1->setGeometry(QRect(560, 270, 113, 22));
+        schuifPassSlot1->setAutoFillBackground(false);
+        schuifPassSlot1->setStyleSheet(QString::fromUtf8("QLineEdit { background-color: white; }"));
+        draaiCodeSlot2 = new QLineEdit(centralwidget);
+        draaiCodeSlot2->setObjectName("draaiCodeSlot2");
+        draaiCodeSlot2->setGeometry(QRect(360, 270, 113, 22));
+        draaiCodeSlot2->setStyleSheet(QString::fromUtf8("QLineEdit { background-color: white; }"));
+        draaiCodeSlot1 = new QLineEdit(centralwidget);
+        draaiCodeSlot1->setObjectName("draaiCodeSlot1");
+        draaiCodeSlot1->setGeometry(QRect(300, 150, 113, 22));
+        draaiCodeSlot1->setStyleSheet(QString::fromUtf8("QLineEdit { background-color: white; }"));
+        schuifCodeSlot1 = new QLineEdit(centralwidget);
+        schuifCodeSlot1->setObjectName("schuifCodeSlot1");
+        schuifCodeSlot1->setGeometry(QRect(560, 300, 113, 22));
+        schuifCodeSlot1->setStyleSheet(QString::fromUtf8("QLineEdit { background-color: white; }"));
+        draaiPassSlot1 = new QLineEdit(centralwidget);
+        draaiPassSlot1->setObjectName("draaiPassSlot1");
+        draaiPassSlot1->setGeometry(QRect(300, 180, 113, 22));
+        draaiPassSlot1->setStyleSheet(QString::fromUtf8("QLineEdit { background-color: white; }"));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -93,8 +107,13 @@ public:
         draaideur2Knop->setText(QCoreApplication::translate("MainWindow", "d2", nullptr));
         labelHalsensor->setText(QCoreApplication::translate("MainWindow", "halsensor", nullptr));
 #if QT_CONFIG(accessibility)
-        sleutelSlot->setAccessibleDescription(QString());
+        schuifPassSlot1->setAccessibleDescription(QString());
 #endif // QT_CONFIG(accessibility)
+        schuifPassSlot1->setPlaceholderText(QCoreApplication::translate("MainWindow", "Enter password:", nullptr));
+        draaiCodeSlot2->setPlaceholderText(QCoreApplication::translate("MainWindow", "Enter code:", nullptr));
+        draaiCodeSlot1->setPlaceholderText(QCoreApplication::translate("MainWindow", "Enter code:", nullptr));
+        schuifCodeSlot1->setPlaceholderText(QCoreApplication::translate("MainWindow", "Enter code:", nullptr));
+        draaiPassSlot1->setPlaceholderText(QCoreApplication::translate("MainWindow", "Enter password:", nullptr));
     } // retranslateUi
 
 };

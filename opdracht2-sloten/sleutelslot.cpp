@@ -1,6 +1,5 @@
 #include "sleutelslot.h"
 #include <iostream>
-#include <QMessageBox>
 
 Sleutelslot::Sleutelslot(std::string s): sleutel(s)
 {
