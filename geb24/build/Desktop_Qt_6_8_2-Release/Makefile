@@ -1367,7 +1367,204 @@ draaideur.o: ../../../opdracht4-sloten3/draaideur.cpp ../../../opdracht4-sloten3
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o draaideur.o ../../../opdracht4-sloten3/draaideur.cpp
 
 drukbox.o: ../../../opdracht4-sloten3/drukbox.cpp ../../../opdracht4-sloten3/drukbox.h \
-		../../../opdracht4-sloten3/afdrukker.h
+		../../../opdracht4-sloten3/afdrukker.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/QTextBrowser \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qtextbrowser.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qtguiglobal.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qglobal.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qtversionchecks.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qtconfiginclude.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qconfig.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qtcore-config.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qtconfigmacros.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qtdeprecationdefinitions.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qtcoreexports.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qcompilerdetection.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qprocessordetection.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qsystemdetection.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qtdeprecationmarkers.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qtclasshelpermacros.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qtpreprocessorsupport.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qassert.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qtnoop.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qtypes.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qtversion.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qtypeinfo.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qcontainerfwd.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qsysinfo.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qlogging.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qflags.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qcompare_impl.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qatomic.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qbasicatomic.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qatomic_cxx11.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qgenericatomic.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qyieldcpu.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qconstructormacros.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qdarwinhelpers.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qexceptionhandling.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qforeach.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qttypetraits.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qfunctionpointer.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qglobalstatic.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qmalloc.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qminmax.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qnumeric.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qoverload.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qswap.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qtenvironmentvariables.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qtresource.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qttranslation.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qversiontagging.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qtgui-config.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qtguiexports.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qtwidgets-config.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qtwidgetsexports.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qtextedit.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qframe.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qwidget.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qwindowdefs.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qobjectdefs.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qnamespace.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qcompare.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qcomparehelpers.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/q20type_traits.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qtmetamacros.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qfunctionaltools_impl.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qobject.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qstring.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qchar.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qstringview.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qbytearray.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qrefcount.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qarraydata.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qpair.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qarraydatapointer.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qarraydataops.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qcontainertools_impl.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qxptype_traits.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/q20functional.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/q20memory.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qbytearrayalgorithms.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qbytearrayview.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qstringfwd.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qstringliteral.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qstringalgorithms.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qlatin1stringview.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qanystringview.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qutf8stringview.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qstringtokenizer.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qstringbuilder.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qstringconverter.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qstringconverter_base.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qlist.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qhashfunctions.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qiterator.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qbytearraylist.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qstringlist.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qalgorithms.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qstringmatcher.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qcoreevent.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qscopedpointer.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qmetatype.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qdatastream.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qiodevicebase.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qfloat16.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qmath.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qiterable.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qmetacontainer.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qcontainerinfo.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qtaggedpointer.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qscopeguard.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qobject_impl.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qbindingstorage.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qmargins.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/q23utility.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qaction.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qkeysequence.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qicon.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qsize.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qpixmap.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qpaintdevice.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qrect.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qpoint.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qcolor.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qrgb.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qrgba64.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qshareddata.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qimage.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qpixelformat.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qtransform.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qpolygon.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qregion.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qspan.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/q20iterator.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qline.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qvariant.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qdebug.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qtextstream.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qcontiguouscache.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qsharedpointer.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qsharedpointer_impl.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qmap.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qshareddata_impl.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qset.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qhash.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qvarlengtharray.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qpalette.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qbrush.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qfont.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qendian.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qfontmetrics.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qfontinfo.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qsizepolicy.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qcursor.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qbitmap.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qevent.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qiodevice.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qurl.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qeventpoint.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qvector2d.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qvectornd.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qpointingdevice.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qinputdevice.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qscreen.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/QList \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/QObject \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/QRect \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/QSize \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/QSizeF \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/QTransform \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qnativeinterface.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qscreen_platform.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qguiapplication.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qdeadlinetimer.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qelapsedtimer.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qeventloop.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qcoreapplication_platform.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qfuture.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qfutureinterface.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qmutex.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qtsan_impl.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qresultstore.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qfuture_impl.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qthreadpool.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qthread.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qrunnable.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qexception.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qpromise.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qinputmethod.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/qlocale.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qguiapplication_platform.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qtextdocument.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qtextoption.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qtextcursor.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qtextformat.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qpen.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o drukbox.o ../../../opdracht4-sloten3/drukbox.cpp
 
 hallsensor.o: ../../../opdracht4-sloten3/hallsensor.cpp ../../../opdracht4-sloten3/hallsensor.h \
@@ -1896,31 +2093,16 @@ mainwindow.o: ../../../opdracht4-sloten3/mainwindow.cpp ../../../opdracht4-slote
 		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qguiapplication_platform.h \
 		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qtabwidget.h \
 		ui_mainwindow.h \
-		/home/paco/Qt/6.8.2/gcc_64/include/QtCore/QVariant \
-		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/QApplication \
-		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qapplication.h \
-		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/QLabel \
-		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qlabel.h \
-		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qframe.h \
-		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qpicture.h \
-		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qtextdocument.h \
-		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/QLineEdit \
-		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qlineedit.h \
-		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qtextcursor.h \
-		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qtextformat.h \
-		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qpen.h \
-		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qtextoption.h \
-		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/QMenuBar \
-		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qmenubar.h \
-		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qmenu.h \
-		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/QPushButton \
-		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qpushbutton.h \
-		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qabstractbutton.h \
-		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/QStatusBar \
-		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qstatusbar.h \
-		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/QWidget \
 		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/QPainter \
 		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qpainter.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qtextoption.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qpen.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/QLineEdit \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qlineedit.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qframe.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qtextcursor.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qtextdocument.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtGui/qtextformat.h \
 		../../../opdracht4-sloten3/hallsensor.h \
 		../../../opdracht4-sloten3/sensor.h \
 		../../../opdracht4-sloten3/schuifdeur.h \
@@ -1930,7 +2112,12 @@ mainwindow.o: ../../../opdracht4-sloten3/mainwindow.cpp ../../../opdracht4-slote
 		../../../opdracht4-sloten3/codeslot.h \
 		../../../opdracht4-sloten3/sleutelslot.h \
 		../../../opdracht4-sloten3/herkenningsslot.h \
-		../../../opdracht4-sloten3/afdrukker.h
+		../../../opdracht4-sloten3/afdrukker.h \
+		../../../opdracht4-sloten3/drukbox.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/QTextBrowser \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qtextbrowser.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qtextedit.h \
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qabstractscrollarea.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../../../opdracht4-sloten3/mainwindow.cpp
 
 schuifdeur.o: ../../../opdracht4-sloten3/schuifdeur.cpp ../../../opdracht4-sloten3/schuifdeur.h \
