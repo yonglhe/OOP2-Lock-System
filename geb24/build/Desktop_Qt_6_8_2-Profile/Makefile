@@ -1733,7 +1733,8 @@ idkaart.o: ../../../opdracht5-sloten4/idkaart.cpp ../../../opdracht5-sloten4/idk
 
 kaartslot.o: ../../../opdracht5-sloten4/kaartslot.cpp ../../../opdracht5-sloten4/kaartslot.h \
 		../../../opdracht5-sloten4/slot.h \
-		../../../opdracht5-sloten4/idkaart.h
+		../../../opdracht5-sloten4/idkaart.h \
+		../../../opdracht5-sloten4/slotexception.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o kaartslot.o ../../../opdracht5-sloten4/kaartslot.cpp
 
 main.o: ../../../opdracht5-sloten4/main.cpp ../../../opdracht5-sloten4/mainwindow.h \
@@ -2149,7 +2150,8 @@ mainwindow.o: ../../../opdracht5-sloten4/mainwindow.cpp ../../../opdracht5-slote
 		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/QTextBrowser \
 		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qtextbrowser.h \
 		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qtextedit.h \
-		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qabstractscrollarea.h
+		/home/paco/Qt/6.8.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../opdracht5-sloten4/slotexception.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../../../opdracht5-sloten4/mainwindow.cpp
 
 schuifdeur.o: ../../../opdracht5-sloten4/schuifdeur.cpp ../../../opdracht5-sloten4/schuifdeur.h \

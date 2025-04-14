@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../../opdracht4-sloten3/mainwindow.h"
+#include "../../../opdracht2-sloten/mainwindow.h"
 #include <QtCore/qmetatype.h>
 
 #include <QtCore/qtmochelpers.h>
@@ -42,10 +42,7 @@ static constexpr auto qt_meta_stringdata_ZN10MainWindowE = QtMocHelpers::stringD
     "",
     "schuifdeurKnop",
     "draaideur1Knop",
-    "draaideur2Knop",
-    "knopToegang",
-    "knopGeenToegang",
-    "kaartenbakKnop"
+    "draaideur2Knop"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -57,7 +54,7 @@ Q_CONSTINIT static const uint qt_meta_data_ZN10MainWindowE[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       7,   14, // methods
+       4,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -65,18 +62,12 @@ Q_CONSTINIT static const uint qt_meta_data_ZN10MainWindowE[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   56,    2, 0x08,    1 /* Private */,
-       3,    0,   57,    2, 0x08,    2 /* Private */,
-       4,    0,   58,    2, 0x08,    3 /* Private */,
-       5,    0,   59,    2, 0x08,    4 /* Private */,
-       6,    0,   60,    2, 0x08,    5 /* Private */,
-       7,    0,   61,    2, 0x08,    6 /* Private */,
-       8,    0,   62,    2, 0x08,    7 /* Private */,
+       1,    0,   38,    2, 0x08,    1 /* Private */,
+       3,    0,   39,    2, 0x08,    2 /* Private */,
+       4,    0,   40,    2, 0x08,    3 /* Private */,
+       5,    0,   41,    2, 0x08,    4 /* Private */,
 
  // slots: parameters
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -101,12 +92,6 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         // method 'draaideur1Knop'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'draaideur2Knop'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'knopToegang'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'knopGeenToegang'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'kaartenbakKnop'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -121,9 +106,6 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 1: _t->schuifdeurKnop(); break;
         case 2: _t->draaideur1Knop(); break;
         case 3: _t->draaideur2Knop(); break;
-        case 4: _t->knopToegang(); break;
-        case 5: _t->knopGeenToegang(); break;
-        case 6: _t->kaartenbakKnop(); break;
         default: ;
         }
     }
@@ -149,14 +131,14 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 7)
+        if (_id < 4)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 7;
+        _id -= 4;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 7)
+        if (_id < 4)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 7;
+        _id -= 4;
     }
     return _id;
 }

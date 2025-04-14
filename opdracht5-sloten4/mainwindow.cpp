@@ -323,5 +323,11 @@ void MainWindow::kaartGeenToegang(){
             idKaart->verwijdertoegang(kaartslot);
     }
 
+    for(auto const& slot: d1->getSlotList()){
+        auto* kaartslot = dynamic_cast<Kaartslot*>(slot);
+        if(kaartslot != nullptr)
+            idKaart->verwijdertoegang(kaartslot);
+    }
+
     std::cout<< "Er zijn/is " << idKaart->deVectorGrootte() << " id-kaarten die toegang hebben." <<std::endl;
 }

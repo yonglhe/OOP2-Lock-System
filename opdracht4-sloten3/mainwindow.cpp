@@ -149,14 +149,6 @@ void MainWindow::knopGeenToegang()
             std::string input = ui->lineEdit->text().toStdString();
             herkenslot->voegAutorisatieToe(input, false);
 
-            // auto deKaartenbak = herkenslot->getKaartenbak();
-            // auto zoek(deKaartenbak.find(input));
-
-            // if(zoek != deKaartenbak.end()){
-            //     std::cout << zoek->second << std::endl;
-            //     zoek->second = false;
-            //     std::cout << zoek->second << std::endl;
-            //     std::cout << input << " heeft geen toegang meer." <<std::endl;
             }
     }
     ui->lineEdit->clear();
